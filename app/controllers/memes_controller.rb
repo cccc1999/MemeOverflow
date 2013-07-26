@@ -14,8 +14,8 @@ class MemesController < ApplicationController
     @user = current_user
     if !params.has_key?(:url)
       #TODO(cc): change this
-
-      pic_path = "/app/assets/images/meme_image/%s.jpg" % [params[:meme][:picture]]
+      pic_name = "%s.jpg" % [params[:meme][:picture]]
+      pic_path = Rails.root.join('app', 'assets', 'images', 'meme_image', pic_name)
       url_result = generate(pic_path, params[:meme][:top_text], params[:meme][:bottom_text])
       params[:url] = url_result
     end
