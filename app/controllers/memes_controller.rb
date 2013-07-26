@@ -46,7 +46,7 @@ class MemesController < ApplicationController
     draw.font = File.join(File.dirname(__FILE__), "../assets/", "fonts", "Flat-UI-Icons-16.ttf")
     draw.font_weight = Magick::BoldWeight
 
-    pointsize = image.columns / 5.0
+    pointsize = image.columns / 6.0
     stroke_width = pointsize / 30.0
     x_position = image.columns / 2
     y_position = image.rows * 0.15
