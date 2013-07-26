@@ -10,4 +10,4 @@
         = meme.upvote_button
         %p.meme-score= meme.score
         = meme.downvote_button
-    = social_share_button_tag("Check out this meme from #MemeOverflow!", :url => meme_url(meme), :'data-source' => meme.url, :'data-type' => 'photo')   
+    = social_share_button_tag("!", :url => meme_url(meme), :'data-source' => meme.url, :'data-type' => 'photo')   

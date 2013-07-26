@@ -1,6 +1,13 @@
 %h1 Upload
 
 = form_for @meme do |f|
-  = f.label :url, "Upload Your MEME!:"
-  = f.filepicker_field :url
+  
+  = image_tag "meme_image/a_dog.jpg", :id => 'meme_select_pic'
+  = f.select :picture, options_for_select([["a dog", "a_dog"], ["Bieber Girl", "bieber_girl"], ["Business Cat", "businesscat"], ['Fry', 'fry'], ['Y U No', 'y_u_no'], ['Success Kid', 'success_kid'], ['Angry Arnold', 'angry_arnold'], ['Bieber Point', 'bieber_point'], ['Chill Lemur','chill_lemur'],['Cool dog','cool_dog'],['Cool Story Bro','cool_story_bro'],['dos equis','dos_equis'],['obama','h_obama'],['hipster ariel','hipster_ariel'],['ducreux','j_ducreux'],['jackie chan','jackie_chan'],['jesus','jesus'],['kanye','kanye'],['keep calm','keep_calm'],['new overlords','new_overlords'],['oreilly','oreilly'],['pedobear','pedobear'],['picard','picard'],['poker cat','poker_car'],['rage','rage'], ['rage ewok','rape_ewok'], ['red shirt','red_shirt'], ['ronald call','ronald_call'], ['sadkeanu','sadkeanu'], ['scumbag','scumbag'], ['snob','snob'], ['spiderman sword','spiderman_sword'], ['tear me apart','tear_me_apart'], ['trollface','trollface'], ['wonka','wonka'], ['confused','xzibit_confused'], ['laugh','xzibit_laugh'], ['yao ming','yao_ming']])
+
+
+  = f.label :top_text 
+  = f.text_field :top_text
+  = f.label :bottom_text 
+  = f.text_field :bottom_text
   = f.submit

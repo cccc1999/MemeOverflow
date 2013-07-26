@@ -1,13 +1,12 @@
 .navbar.navbar-fixed-top
   .navbar-inner
     .container
-      = link_to "MemeOverflow", root_path, :class => "brand brand-shift"
+      = link_to "YelpMemeGen", root_path, :class => "brand brand-shift"
 
       %ul.nav.pull-right
         - if can? :create, Meme
           %li= link_to "Upload a meme", '#', :id => 'upload'
-        %li= link_to "TV mode", present_memes_show_path
-        %li= link_to "About Us", aboutus_path
+          %li= link_to "Create a meme", :controller => "memes", :action => "new", :id => 'create_meme'
         - if current_user
           %li
             = link_to current_user.full_name.titleize, current_user

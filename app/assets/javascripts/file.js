@@ -17,7 +17,7 @@ var File = {
   },
 
   setFileKey: function() {
-    filepicker.setKey('AOixcvrX6QDqKiFk6kvaCz');
+    filepicker.setKey('ASvEK6hqxQRaRuAqhSMz9z');
   },
 
   pickMultipleImages: function() {
@@ -25,14 +25,15 @@ var File = {
     filepicker.pickMultiple({
       mimetypes: ['image/*', 'text/plain'],
       container: 'window',
-      services:['COMPUTER', 'FACEBOOK', 'GMAIL', 'INSTAGRAM']
+      services:['COMPUTER', 'FACEBOOK', 'GMAIL']
       }, self.fileUploadSuccess, self.fileUploadError);
   },
 
   fileUploadSuccess: function(FPFiles) {
     $.each(FPFiles, function(index, FPFile){
-      $.post('memes', FPFile).always(function(data) {
+      $.post('/memes', FPFile).always(function(data) {
         $('div.gallery div.row').prepend(data.responseText);
+        location.reload();
       });
     });
   },

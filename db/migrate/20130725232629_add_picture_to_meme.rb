@@ -1,0 +1,5 @@
+class AddPictureToMeme < ActiveRecord::Migration
+  def change
+  	add_column(:memes, :picture, :string)
+  end
+end

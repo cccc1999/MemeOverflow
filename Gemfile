@@ -20,6 +20,7 @@ group :development, :test do
   gem 'guard-rspec'
   gem 'quiet_assets'
   gem 'better_errors'
+  gem 'debugger'
 end
 
 gem 'draper', '~> 1.0'
@@ -49,6 +50,11 @@ gem 'jquery-rails'
 
 gem 'haml-rails'
 
+
+gem 'rmagick'
+gem "fileutils"
+
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
@@ -62,4 +68,4 @@ gem 'haml-rails'
 # gem 'capistrano'
 
 # To use debugger
-# gem 'debugger'
+# 

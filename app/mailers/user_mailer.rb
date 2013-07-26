@@ -1,5 +1,5 @@
 class UserMailer < ActionMailer::Base
-  default from: "binaryskipper@gmail.com"
+  default from: "cheng@yelp.com"
 
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
@@ -8,7 +8,5 @@ class UserMailer < ActionMailer::Base
   #
   def signup_confirmation(user)
     @user = user
-
-    mail to: @user.email
   end
 end
