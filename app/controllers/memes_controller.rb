@@ -14,7 +14,7 @@ class MemesController < ApplicationController
     @user = current_user
     if !params.has_key?(:url)
       #TODO(cc): change this
-      pic_path = "/Users/cheng/Desktop/meme/MemeOverflow/app/assets/images/meme_image/%s.jpg" % [params[:meme][:picture]]
+      pic_path = "../assets/images/meme_image/%s.jpg" % [params[:meme][:picture]]
       url_result = generate(pic_path, params[:meme][:top_text], params[:meme][:bottom_text])
       params[:url] = url_result
     end
