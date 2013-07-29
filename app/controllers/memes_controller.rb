@@ -47,7 +47,7 @@ class MemesController < ApplicationController
     draw.font_weight = Magick::BoldWeight
 
     pointsize = image.columns / 7.0
-    stroke_width = pointsize / 35.0
+    stroke_width = pointsize / 30.0
     x_position = image.columns / 2
     y_position = image.rows * 0.15
 
