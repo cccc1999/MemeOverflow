@@ -83,10 +83,10 @@ class MemesController < ApplicationController
     output_path = "/tmp/meme-#{Time.now.to_i}.jpeg"
     canvas.write(output_path)
     cmd = "curl -X POST -F fileUpload=@%s https://www.filepicker.io/api/store/S3\?key\=ASvEK6hqxQRaRuAqhSMz9z" % [output_path]
-
+    debugger
     result =  %x[ #{cmd} ]
     #TODO(cc):hacky
-    url_result = "https://%s" % [result.split(',')[0].split(':')[2][2..-2]]
+    url_result = "https://%s" % [result.split(',')[1].split(':')[2][2..-2]]
     url_result
   end
 
